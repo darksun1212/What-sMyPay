@@ -101,14 +101,15 @@ public class MainActivity extends AppCompatActivity {
             message2.setText("You will earn 10% Sales Commission!");
             RetailPrctEarned=0;
             }
-        else if(RetailPrctEarned ==2){
-            message2.setText("You will earn 20% Sales Commission!");
-            RetailPrctEarned=0;
+        else {
+            if (RetailPrctEarned == 2) {
+                message2.setText("You will earn 20% Sales Commission!");
+                RetailPrctEarned = 0;
+            } else {
+                message2.setText("Sorry! You haven't earned Sales Commission yet");
+                RetailPrctEarned = 0;
             }
-        else if (RetailPrctEarned <10){
-                    message2.setText("Sorry! You haven't earnrd Sales Commission yet");
-            RetailPrctEarned=0;
-            }
+        }
         }
 }
 
